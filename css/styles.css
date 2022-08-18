@@ -1002,18 +1002,20 @@ input {
   display: inline-block;
   width: 16px;
   height: 15px;
-  margin-right: 8px;
+  margin-right: 10px;
   border: 2px solid var(--main-color);
   border-radius: 2px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-checkbox:focus {
-  border-color: var(--current-color);
-}
 .icon-check {
   position: absolute;
+  display: block;
+  width: 16px;
+  height: 15px;
   top: 50%;
+  margin-right: 8px;
+  border-radius: 2px;
   opacity: 0;
   transform: translateY(-50%);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -1021,10 +1023,10 @@ input {
 }
 .modal-check:checked + .icon-checkbox .icon-check {
   background-color: var(--current-color);
-  border: none;
+  border-color: 2px solid var(--current-color);
 }
-.modal-check:focus + .icon-checkbox .icon-check {
-  border: 2px solid var(--current-color);
+.modal-check:focus + .icon-checkbox {
+  border-color: 2px solid var(--current-color);
 }
 .modal-check:checked + .icon-checkbox .icon-check {
   opacity: 1;
