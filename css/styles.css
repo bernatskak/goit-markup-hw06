@@ -908,17 +908,17 @@ input {
   height: 342px;
   margin-bottom: 10px;
 }
-
-.form-field:not(:last-child) {
-  margin-bottom: 0;
-}
-.form-lable {
+.form-label {
+  padding: 1px 0;
+  margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16px;
 
-  margin-bottom: 4px;
-  color: #757575;
+  color: var(--secondary-color);
+}
+.form-field:not(:last-child) {
+  margin-bottom: 0;
 }
 
 .modal-input {
@@ -988,7 +988,6 @@ input {
   margin-top: 20px;
   margin-bottom: 30px;
 }
-
 .check-text {
   position: relative;
   display: flex;
@@ -1002,31 +1001,32 @@ input {
 .icon-checkbox {
   display: inline-block;
   width: 16px;
-  height: 16px;
+  height: 15px;
   margin-right: 8px;
   border: 2px solid var(--main-color);
   border-radius: 2px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.icon-checkbox:focus {
+  border-color: var(--current-color);
+}
 .icon-check {
   position: absolute;
   top: 50%;
   opacity: 0;
-  width: 16px;
-  height: 16px;
-  margin-right: 8px;
   transform: translateY(-50%);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .modal-check:checked + .icon-checkbox .icon-check {
-  border-color: 2px solid var(--current-color);
+  background-color: var(--current-color);
+  border: none;
 }
 .modal-check:focus + .icon-checkbox .icon-check {
-  background-color: var(--current-color);
-  border-color: 2px solid var(--current-color);
+  border: 2px solid var(--current-color);
+}
+.modal-check:checked + .icon-checkbox .icon-check {
   opacity: 1;
 }
 
