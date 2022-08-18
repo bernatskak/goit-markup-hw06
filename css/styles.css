@@ -914,7 +914,6 @@ input {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16px;
-
   color: var(--secondary-color);
 }
 .form-field:not(:last-child) {
@@ -1039,7 +1038,6 @@ input {
 
 .button-check {
   padding: 10px 52px;
-
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
